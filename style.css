@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  user-select: none;
+  scroll-behavior: smooth;
+  user-zoom:none;
+}
+#menuBar{
+  width: 40%;
+  transform: translateX(100vh);
+  min-height: 100vh;
+  background: #111;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:999999;
+  transition:500ms;
+  cursor: pointer;
+}
+#menuBar .closeBtn{
+  color:#fff;
+  font-size: 1.2em;
+}
+#menu{
+  padding: 10px;
+  transition:500ms;
+}
+#menu #menuBarIcon{
+  font-size: 1.2em;
+  color:#fff;
+}
+#menuBar.active{
+  transform: translateX(0);
+}
+#menuBar #closeBtn{
+  position: absolute;
+  top: 0;
+  color:#fff;
+  padding: 20px;
+}
+#menuBar #menu-items{
+  position: absolute;
+  top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+#menuBar #menu-items a{
+  line-height: 2.4;
+  text-decoration: none;
+  font-size: 1em;
+  color:#fff;
+  padding: 2px;
+  text-align: center;
+}
+#log:nth-child(2){
+  color:#f11a7b;
+  font-weight: 900;
+  text-shadow: 0px 0px 9px rgba(241, 26, 123, 0.61);
+}
+#log:nth-child(1){
+}
+section#home, section#mainContent{
+  transition:500ms;
+  transform:translateX(-100px);
+}
+section#home{
+  display: flex;
+  min-height:100%;
+  width: 100%;
+  justify-content: center;
+  transition: 500ms;
+  opacity: 0;
+    /* Adjust the size based on your SVG dimensions */
+  /*transform: translateX(100%);*/
+}
+section#mainContent{
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+  transition: 500ms;
+  flex-direction:column;
+  padding:10px;
+  opacity: 0;
+  /*transform:translateX(-100%);*/
+}
+#logo #oo{
+  font-family: 'Poppins', sans-serif;
+}
+#content h2{
+  color:#1f1f1f;
+  padding: 10px;
+  text-align: center;
+  font-weight: 1000;
+  font-style: bold;
+}
+#intro{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #161616;
+  z-index: 99999999;
+  transition:1s;
+}
+#intro-header{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}
+#log{
+  color:#fff;
+  opacity: 0;
+  transform: translateY(60px);
+  display: inline-block;
+  font-size: 1.2em;
+}
+#log.active{
+  opacity: 1;
+  transform: translateY(0px);
+  transition: ease 0.5s;
+}
+#log.fade{
+  transform: translateY(-160px);
+  opacity: 0;
+  transition: ease 0.5s;
+}
+#logo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:#111;
+  width: 100%;
+  padding:15px;
+  display: flex;
+  justify-content: space-between;
+  opacity:1;
+  transition: 500ms ease;
+  transform-origin:center center;
+  font-size: 0.9em;
+  letter-spacing: 3px;
+  opacity:0;
+  z-index: 9;
+}
+#logo img{
+  width: 25px;
+  height: 25px;
+}
+#news, #inventions{
+  transition:300ms;
+}
+#news:hover, #inventions:hover{
+  transform:rotate(-0.3deg);
+}
+#logo a{
+  color:#Fff;
+  opacity: 0.8;
+  font-size:1.4em;
+  font-weight: 600;
+  padding: 5px;
+  text-decoration: none;
+}
+#content{
+  width:95%;
+  height: 500px;
+  margin-top: 85px;
+  overflow: hidden;
+}
+#content #img-container{
+  width:100%;
+  height: 100%;
+  transition:0.5s;
+}
+#content #img-container img, img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 500ms linear;
+  border-bottom:1px solid #fff;
+}
+section#mainContent #title{
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  color:#222;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+section#mainContent #headingOfNews{
+ padding:10px;
+ font-size:1.1em;
+ text-transform: uppercase;
+}
+section#mainContent #headingOfNews h4{
+  color:#1f1f1f;
+  opacity:0.8;
+  font-weight: 700;
+}
+section#mainContent #contentOfNews1{
+  padding-top: 10px;
+}
+section#mainContent #contentOfNews1 p{
+  font-size:0.9em;
+  line-height: 20px;
+  color:#1f1f1f;
+  opacity: 0.8;
+}
+section#mainContent #news{
+  padding:10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin-top: 20px;
+}
+section#mainContent #inventions #invv{
+  padding:px;
+  margin-top: 20px;
+  width: 100%;
+}
+section#mainContent #inventions #titleOfInventions{
+  color:#333;
+  text-align: center;
+  text-transform: uppercase;
+  font-size:1.07em;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+section#mainContent #inventions #contentOfInven{
+  padding:12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border:1px solid #e1e1e1;
+  border-radius:4px;
+}
+section#mainContent #inventions #contentOfInven h2{
+  padding: 10px;
+  font-size:1.1em;
+  color:#2D4059;
+  margin-top: -5px;
+}
+section#mainContent #inventions #contentOfInven p{
+  padding:1px;
+  font-size:0.9em;
+  line-height: 20px;
+  opacity:0.8;
+  color:#1f1f1f;
+}
+section#mainContent #inventions #contentOfInven h2 b{
+  color:#1f1f1f;
+  font-weight:1000;
+}
+footer{
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "VT323";
+  font-size:0.8em;
+  background: #000;
+  color:#e6e6e6;
+  border-radius:4px;
+  opacity: 0.93;
+}
+section#mainContent p b{
+  font-size:1.1em;
+}
+#satellite-box{
+  width: 100%;
+  height: 100%;margin-top: 20px;
+  padding: 7px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#satellite-box #titleSatellite{
+  text-align: center;
+  font-size:0.8em;
+  color:#FB2576;
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+#satellite-box #satellite-details p{
+  padding: 7px;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+#s-{
+  color:#666;
+}
+#s- span{
+  color:#222;
+  opacity: 0.9;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+#satellite-box #satellite-details #name{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#world-container {
+  width: 100%;
+  height: 100vh;
+}
+#space-box{
+ width: 100%;
+ height: 100%;
+ background: #fff;
+ margin-top: 20px;
+ padding: 10px;
+ background: #1f1f1f;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ font-family: 'Noto Sans', sans-serif;
+}
+#space-box #spaceTitle{
+  text-align: center;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: 1000;
+  color: #eee;
+  letter-spacing: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+#space-box #spaceTitle span{
+  color:#068fff;
+  font-weight: 1000;
+}
+#nop{
+  color: #eee;
+  font-weight: 1000;
+  font-size: 1.3em;
+}
+#space-content{
+  padding: 10px;
+  opacity: 0.9;
+}
+#space-content h3{
+  color:#068fff;
+  font-size:1em;
+  padding: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  /*transform: translateX(19px);*/
+}
+#names-h{
+  font-size: 1.2em;
+  color:#fff;
+  line-height: 2;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#names-heading{
+  font-size: 1em;
+}
+#names{
+  line-height: 2;
+  color:#eee;
+  font-family: 'Ubuntu', sans-serif;
+}
+#names b{
+  color: #068FFF;
+}
+#map {
+ height: 100vh;
+ width: 100%;
+ overflow: hidden;
+ transition: ease 0.5s;
+ border:1px solid #999;
+}
+#instruction{
+  padding:5px;
+  opacity:0.6;
+}
+#instruction p{
+  font-size: 0.8em;
+  color:#666;
+  font-family: "VT323";
+}
